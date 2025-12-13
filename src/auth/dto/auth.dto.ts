@@ -27,3 +27,11 @@ export class SignupDto {
     @MaxLength(32)
     lastName: string;
 }
+export class LoginDto {
+    @IsEmail()
+    @IsNotEmpty()
+    email: string;
+    @IsNotEmpty()
+    @IsString()
+    password: string;
+}
